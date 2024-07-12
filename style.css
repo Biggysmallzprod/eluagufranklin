@@ -66,12 +66,7 @@ nav ul li a:hover {
     top: 15px;
     right: 20px;
     color: #fff;
-    z-index: 999;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
+   
 }
 
 @media (max-width: 768px) {
