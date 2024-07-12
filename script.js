@@ -29,15 +29,25 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 // Toggle mobile menu
-const navToggle = document.getElementById("nav-toggle");
-const navUl = document.getElementById("nav-ul");
+const navToggle = document.getElementById('nav-toggle');
+const navUl = document.getElementById('nav-ul');
 
-navToggle.addEventListener("click", () => {
-  navUl.classList.toggle("showing");
+navToggle.addEventListener('click', () => {
+  navUl.classList.toggle('showing');
+});
+
+// Smooth scroll for internal links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
 });
 
 // Sticky header
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-  header.classList.toggle("sticky", window.scrollY > 0);
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  header.classList.toggle('sticky', window.scrollY > 0);
 });
