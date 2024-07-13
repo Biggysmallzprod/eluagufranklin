@@ -68,26 +68,22 @@ nav ul li a:hover {
     color: #fff;
 }
 
-#nav-ul {
-    display: flex;
-}
-
 @media (max-width: 768px) {
-    #nav-ul {
-        position: fixed;
-        right: 0;
-        top: 0;
-        height: 100%;
-        width: 250px;
-        background: #333;
+    nav ul {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background: #333;
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
+        align-items: center;
+        justify-content: center;
     }
 
-    #nav-ul.showing {
+    nav ul.showing {
         transform: translateX(0);
     }
 
