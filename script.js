@@ -7,26 +7,8 @@ document
     // Here you can add code to handle the form submission, e.g., sending the data to a server
   });
 
-// Smooth scroll for internal links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
-// script.js
 
-// Smooth scroll for internal links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
+
 
 // Toggle mobile menu
 const navToggle = document.getElementById('nav-toggle');
