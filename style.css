@@ -1,13 +1,13 @@
 /* General Styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   line-height: 1.6;
   color: #333;
   background: #f4f4f4;
-  
+  background-image: url("https://img.freepik.com/free-photo/abstract-navy-blue-digital-grid-technology-background_53876-102618.jpg?ga=GA1.2.251865888.1721300541&semt=ais_user");
 }
 
 /* Header and Navigation */
@@ -49,8 +49,6 @@ nav ul li a {
   transition: color 0.3s, background 0.3s;
 }
 
-
-
 nav ul li a:hover {
   color: #ff6f61;
   background: rgba(255, 255, 255, 0.1);
@@ -89,7 +87,6 @@ nav ul li a:hover {
 /* Hero Section */
 .hero-section {
   height: 100vh;
-  background: url('https://img.freepik.com/free-vector/secure-technology-abstract-background_23-2148331625.jpg?ga=GA1.2.251865888.1721300541&semt=ais_user') no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,7 +96,6 @@ nav ul li a:hover {
   padding: 0 20px;
   background-size: cover;
   background-attachment: fixed;
-
 }
 
 .hero-content {
@@ -112,19 +108,22 @@ nav ul li a:hover {
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  animation: slideInLeft 1s ease-in-out;
 }
 
 .hero-content h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  animation: fadeInUp 1s ease-in-out;
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  animation: slideInLeft 1s ease-in-out;
 }
 
 /* Section Styles */
@@ -195,9 +194,8 @@ footer {
   color: #fff;
   text-align: center;
   padding: 2px 0;
-  background-image: url(https://img.freepik.com/free-photo/online-hacking-piracy-background-3d-illustration_1419-2808.jpg?ga=GA1.2.251865888.1721300541&semt=ais_user);
+  background-image: url(https://img.freepik.com/free-photo/abstract-navy-blue-digital-grid-technology-background_53876-102618.jpg?ga=GA1.2.251865888.1721300541&semt=ais_user);
 }
-
 
 footer a {
   color: #fff;
