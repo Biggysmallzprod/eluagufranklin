@@ -64,6 +64,20 @@ nav ul li a:hover {
   top: 15px;
   right: 20px;
   color: #fff;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.menu-icon {
+  display: none;  
+}
+
+.showing {
+  transform: rotate(90deg);
 }
 
 @media (max-width: 768px) {
@@ -81,6 +95,11 @@ nav ul li a:hover {
 
   .nav-toggle {
     display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
   }
 }
 
