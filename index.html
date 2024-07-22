@@ -13,7 +13,10 @@
   <body>
     <header>
       <nav>
-        <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </div>
         <ul id="nav-ul">
           <li><a href="#home">Home</a></li>
           <li><a href="about.html">About Me</a></li>
@@ -84,6 +87,7 @@
     <script>
       document.getElementById('nav-toggle').addEventListener('click', function() {
         document.getElementById('nav-ul').classList.toggle('showing');
+        this.classList.toggle('active');
       });
     </script>
   </body>
