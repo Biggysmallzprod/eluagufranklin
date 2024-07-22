@@ -66,20 +66,15 @@ nav ul li a:hover {
   color: #fff;
   z-index: 1000;
   transition: all 0.3s ease-in-out;
-  transform: scale(1);
-  &:hover {
-    transform: scale(1.1);
-  }
 }
 
-.menu-icon {
-  display: none;  
+.nav-toggle:hover {
+  transform: scale(1.1);
 }
 
 .showing {
   transform: rotate(90deg);
 }
-
 
 @media (max-width: 768px) {
   nav ul {
@@ -223,43 +218,28 @@ footer a:hover {
   color: skyblue;
 }
 
-/* Media Queries */
+/* Media Queries for Mobile Optimizations */
 @media (max-width: 1024px) {
   .hero-content h1 {
     font-size: 2.5rem;
-    letter-spacing: 0.2rem;
-    word-spacing: 0.2rem;
-    letter-spacing: 0.2rem;
   }
 
   .hero-content h2 {
     font-size: 1.3rem;
-    letter-spacing: 0.2rem;
-    word-spacing: 0.2rem;
-    letter-spacing: 0.2rem;
   }
 
   .hero-content p {
     font-size: 1.1rem;
-    letter-spacing: 0.2rem;
-    word-spacing: 0.2rem;
-    letter-spacing: 0.2rem;
   }
 
   .section h2 {
     font-size: 2rem;
-    letter-spacing: 0.2rem;
   }
 
   .section p {
     font-size: 1.1rem;
-    letter-spacing: 0.2rem;
   }
-
-  .section ul {
-    font-size: 1.1rem;
-    letter-spacing: 0.2rem;
-  }
+}
 
 @media (max-width: 768px) {
   .hero-content h1 {
@@ -274,66 +254,40 @@ footer a:hover {
     font-size: 1rem;
   }
 
-   nav ul {
+  nav ul {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
+    display: none;
+    background: #333;
     width: 100%;
-    background-color: #222;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
   }
 
-  .nav-open .nav-container {
-    transform: translateX(0);
+  nav ul.showing {
+    display: flex;
   }
 
-  .nav-container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  .section .content {
-    padding: 15px;
-  }
-
-  .section h2 {
-    font-size: 1.8rem;
+  .nav-toggle {
+    display: block;
   }
 }
 
 @media (max-width: 480px) {
   .hero-content h1 {
     font-size: 1.5rem;
-    letter-spacing: 0.1rem;
-    word-spacing: 0.1rem;
   }
 
   .hero-content h2 {
     font-size: 1rem;
-    letter-spacing: 0.1rem;
-    word-spacing: 0.1rem;
-    
   }
 
   .hero-content p {
     font-size: 0.9rem;
-    letter-spacing: 0.1rem;
-    word-spacing: 0.1rem;
   }
 
   .section h2 {
     font-size: 1.5rem;
-    letter-spacing: 0.1rem;
-    word-spacing: 0.1rem;
   }
 }
