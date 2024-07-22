@@ -81,6 +81,10 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      document.getElementById('nav-toggle').addEventListener('click', function() {
+        document.getElementById('nav-ul').classList.toggle('showing');
+      });
+    </script>
   </body>
 </html>
