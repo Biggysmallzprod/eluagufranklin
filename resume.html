@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume - Eluagu Franklin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* General Styles */
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #333;
+        background: #f4f4f4;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+      }
+
+      /* Header Styles */
+      header {
+        background: #333;
+        color: #fff;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 10px;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ff6f61;
+      }
+
+      /* Resume Section Styles */
+      .resume {
+        padding: 100px 20px;
+        background: #f4f4f4;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .resume .container {
+        max-width: 1200px;
+        text-align: center;
+      }
+
+      .resume h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .resume p {
+        font-size: 1.2rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .resume .download-button {
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .resume .download-button:hover {
+        background-color: #e65550;
+        transform: translateY(-3px);
+      }
+
+      /* Footer */
+      footer {
+        background: black;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        background-image: url(https://img.freepik.com/free-photo/abstract-navy-blue-digital-grid-technology-background_53876-102618.jpg?ga=GA1.2.251865888.1721300541&semt=ais_user);
+      }
+
+      footer p {
+        margin: 5px 0;
+      }
+
+      footer .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      footer .social-icons a {
+        margin: 0 5px;
+        font-size: 1.2rem;
+      }
+
+      /* Media Queries for Footer Optimizations */
+      @media (max-width: 768px) {
+        footer .social-icons {
+          flex-direction: column;
+        }
+
+        footer .social-icons a {
+          margin: 5px 0;
+        }
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 1024px) {
+        .resume h1 {
+          font-size: 2rem;
+        }
+
+        .resume p {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .resume h1 {
+          font-size: 1.8rem;
+        }
+
+        .resume p {
+          font-size: 0.9rem;
+        }
+
+        .resume .download-button {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .resume h1 {
+          font-size: 1.5rem;
+        }
+
+        .resume p {
+          font-size: 0.8rem;
+        }
+
+        .resume .download-button {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">EF</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="about me.html">About Me</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="resume">
+      <div class="container">
+        <h1>My Resume</h1>
+
+        <p>You can download my resume by clicking the button below.</p>
+        <a
+          href="Eluagu_Franklin_Chinonso_Resume New.pdf"
+          class="download-button"
+          target="_blank"
+          >Download Resume</a
+        >
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2024 ELUAGU FRANKLIN. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/eluagu-franklin-84a3bab7/"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/Biggysmallzprod"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="mailto:eluagufranklin@gmail.com"
+          ><i class="fas fa-envelope"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
