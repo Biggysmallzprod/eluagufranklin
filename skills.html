@@ -3,167 +3,285 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Skills and Certifications</title>
+    <title>Skills - Eluagu Franklin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <style>
       /* General Styles */
       body {
-        font-family: Arial, sans-serif;
+        font-family: "Arial", sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f4f4f4;
+        box-sizing: border-box;
+        color: #333;
+        background: #f4f4f4;
       }
 
-      .section {
-        padding: 40px 0;
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+      }
+
+      /* Header Styles */
+      header {
+        background: #333;
+        color: #fff;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 10px;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ff6f61;
+      }
+
+      /* Skills Section Styles */
+      .skills {
+        padding: 100px 20px;
+        background: #f4f4f4;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .skills .container {
+        max-width: 1200px;
         text-align: center;
       }
 
-      h2 {
-        font-size: 2em;
+      .skills h1 {
+        font-size: 2.5rem;
         margin-bottom: 20px;
         color: #333;
-        text-align: center;
-        
       }
 
-      h3 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-        color: #444;
-        text-align: center;
-
+      .skills p {
+        font-size: 1.2rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 40px;
       }
 
-      /* Skills and Certifications Section */
-      #skills-certifications {
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        margin: 20px auto;
+      .skills .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .skills .skill {
+        background: #fff;
+        margin: 10px;
         padding: 20px;
-        max-width: 800px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
       }
 
-      #skills-certifications .content {
-        text-align: left;
-      }
-
-      .section-header {
-        margin: 20px 0 10px;
-      }
-
-      .skill,
-      .certification {
+      .skills .skill i {
+        font-size: 2rem;
         margin-bottom: 10px;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        background-color: #f9f9f9;
+        color: #ff6f61;
       }
 
-      .skill p,
-      .certification p {
-        margin: 0;
+      .skills .skill h3 {
+        font-size: 1.5rem;
         color: #333;
-        font-size: 1em;
+        margin-bottom: 10px;
+      }
+
+      .skills .skill p {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.4;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Footer */
+      footer {
+        background: black;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        background-image: url(https://img.freepik.com/free-photo/abstract-navy-blue-digital-grid-technology-background_53876-102618.jpg?ga=GA1.2.251865888.1721300541&semt=ais_user);
+      }
+
+      footer p {
+        margin: 5px 0;
+      }
+
+      footer .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      footer .social-icons a {
+        margin: 0 5px;
+        font-size: 1.2rem;
+      }
+
+      /* Media Queries for Footer Optimizations */
+      @media (max-width: 768px) {
+        footer .social-icons {
+          flex-direction: column;
+        }
+
+        footer .social-icons a {
+          margin: 5px 0;
+        }
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 1024px) {
+        .skills h1 {
+          font-size: 2rem;
+        }
+
+        .skills p {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .skills h1 {
+          font-size: 1.8rem;
+        }
+
+        .skills p {
+          font-size: 0.9rem;
+        }
+
+        .skills .skill {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .skills h1 {
+          font-size: 1.5rem;
+        }
+
+        .skills p {
+          font-size: 0.8rem;
+        }
+
+        .skills .skill {
+          width: 100%;
+        }
       }
     </style>
   </head>
   <body>
-    <section id="skills-certifications" class="section">
-      <h2>Skills and Certifications</h2>
-      <div class="content">
-        <div class="section-header">
-          <h3>Skills</h3>
-        </div>
-        <div class="skill">
-          <p>Database Management System (DBMS)</p>
-        </div>
-        <div class="skill">
-          <p>Network Security & Database Vulnerabilities</p>
-        </div>
-        <div class="skill">
-          <p>MySQL</p>
-        </div>
-        <div class="skill">
-          <p>Tools of the Trade: Linux and SQL</p>
-        </div>
-        <div class="skill">
-          <p>Kali Linux</p>
-        </div>
-        <div class="skill">
-          <p>Threat & Vulnerability Management</p>
-        </div>
-        <div class="skill">
-          <p>Assets, Threats, and Vulnerabilities</p>
-        </div>
-        <div class="skill">
-          <p>Human Resources (HR)</p>
-        </div>
-        <div class="skill">
-          <p>International Relations</p>
-        </div>
-        <div class="skill">
-          <p>Team Leadership</p>
-        </div>
-        <div class="skill">
-          <p>Team Building</p>
-        </div>
-        <div class="skill">
-          <p>Leadership</p>
-        </div>
-        <div class="skill">
-          <p>European History</p>
-        </div>
-        <div class="skill">
-          <p>History</p>
-        </div>
-        <div class="skill">
-          <p>American History</p>
-        </div>
-        <div class="skill">
-          <p>World History</p>
-        </div>
-        <div class="skill">
-          <p>Student Development</p>
-        </div>
-        <div class="skill">
-          <p>Student Leadership</p>
-        </div>
-        <div class="skill">
-          <p>Mentoring</p>
-        </div>
-        <div class="skill">
-          <p>Account Management</p>
-        </div>
-        <div class="skill">
-          <p>Financial Analysis</p>
-        </div>
-        <div class="skill">
-          <p>Business Analysis</p>
-        </div>
-        <div class="skill">
-          <p>Advertising</p>
-        </div>
-        <div class="skill">
-          <p>Cybersecurity</p>
-        </div>
-        <div class="section-header">
-          <h3>Certifications</h3>
-        </div>
-        <div class="certification">
-          <p>Cybersecurity Professional Certificate, Google.</p>
-        </div>
-        <div class="certification">
-          <p>Google Cloud Cybersecurity Professional Certificate</p>
-        </div>
-        <div class="certification">
-          <p>Web Development and Cybersecurity Certificate, ICTSlides</p>
-        </div>
-        <div class="certification">
-          <p>Network and Database Vulnerabilities Certificate, IBM</p>
+    <header>
+      <div class="container">
+        <div class="logo">EF</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="about me.html">About Me</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="skills">
+      <div class="container">
+        <h1>My Skills</h1>
+        <p>Here are some of the skills I have acquired over the years.</p>
+        <div class="skill-list">
+          <div class="skill">
+            <i class="fas fa-code"></i>
+            <h3>Web Development</h3>
+            <p>HTML, CSS, JavaScript, React</p>
+          </div>
+          <div class="skill">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Cybersecurity</h3>
+            <p>Network Security, Penetration Testing, Incident Response</p>
+          </div>
+          <div class="skill">
+            <i class="fas fa-database"></i>
+            <h3>Database Management</h3>
+            <p>MySQL, PostgreSQL, MongoDB</p>
+          </div>
+          <div class="skill">
+            <i class="fas fa-network-wired"></i>
+            <h3>Networking</h3>
+            <p>Network Configuration, Protocols, Troubleshooting</p>
+          </div>
+          <div class="skill">
+            <i class="fas fa-users"></i>
+            <h3>Human Resources</h3>
+            <p>Recruitment, Training, Employee Relations</p>
+          </div>
+          <div class="skill">
+            <i class="fas fa-project-diagram"></i>
+            <h3>Project Management</h3>
+            <p>Planning, Execution, Monitoring</p>
+          </div>
         </div>
       </div>
     </section>
+    <footer>
+      <p>&copy; 2024 ELUAGU FRANKLIN. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/eluagu-franklin-84a3bab7/"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/Biggysmallzprod"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="mailto:eluagufranklin@gmail.com"
+          ><i class="fas fa-envelope"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
