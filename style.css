@@ -17,6 +17,7 @@ body {
 
 /* Header Styles */
 header {
+  background: #333;
   color: #fff;
   position: fixed;
   width: 100%;
@@ -52,11 +53,62 @@ nav ul li a:hover {
   color: #ff6f61;
 }
 
-/* Hero Section Styles */
+/* Mobile Menu */
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 25px;
+}
+
+.nav-toggle .bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.nav-toggle.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.nav-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav ul.showing {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+
+/* Hero Section */
 .hero {
   height: 100vh;
-  background: url("https://img.freepik.com/free-photo/abstract-navy-blue-digital-grid-technology-background_53876-102618.jpg?ga=GA1.2.251865888.1721300541&semt=ais_user")
-    no-repeat center center/cover;
+  background: url('https://img.freepik.com/free-photo/abstract-navy-blue-digital-grid-technology-background_53876-102618.jpg?ga=GA1.2.251865888.1721300541&semt=ais_user') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,101 +163,6 @@ nav ul li a:hover {
   color: #ff6f61;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-content h2 {
-    font-size: 1.3rem;
-  }
-
-  .social-icons a {
-    font-size: 1.3rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #333;
-    width: 100%;
-    display: none;
-    transition: all 0.3s ease-in-out;
-  }
-
-  nav ul.showing {
-    display: flex;
-  }
-
-  .nav-toggle {
-    display: block;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #fff;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-  }
-
-  .logo {
-    margin-left: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content h2 {
-    font-size: 1.2rem;
-  }
-
-  .social-icons a {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero-content h2 {
-    font-size: 1rem;
-  }
-
-  .social-icons a {
-    font-size: 1.2rem;
-  }
-}
-@keyframes fadeinup {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideinleft {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 /* Footer */
 footer {
   background: black;
@@ -244,31 +201,66 @@ footer .social-icons a {
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-  .about h1 {
-    font-size: 2rem;
+  .hero-content h1 {
+    font-size: 2.5rem;
   }
 
-  .about p {
-    font-size: 1rem;
+  .hero-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .about h1 {
-    font-size: 1.8rem;
+  .hero-content h1 {
+    font-size: 2rem;
   }
 
-  .about p {
-    font-size: 0.9rem;
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .about h1 {
+  .hero-content h1 {
     font-size: 1.5rem;
   }
 
-  .about p {
-    font-size: 0.8rem;
+  .hero-content h2 {
+    font-size: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeinup {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideinleft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
