@@ -3,102 +3,234 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>About Me - Eluagu Franklin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <style>
-      /* styles.css */
-
-      .section {
-        padding: 60px 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: center;
-      }
-
-      .section h2 {
-        margin-bottom: 20px;
-        font-size: 2.5rem;
+      /* General Styles */
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
         color: #333;
-        animation: slideInLeft 1s ease-in-out;
+        background: #f4f4f4;
       }
 
-      .section .content {
-        background: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        animation: fadeInUp 1s ease-in-out;
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
       }
 
-      .section .content p {
-        font-size: 1.2rem;
-        color: #666;
-        margin-bottom: 20px;
-        line-height: 1.6;
-        text-rendering: auto;
-       text-align: justify;
-      }
-
-      .section .btn {
+      /* Header Styles */
+      header {
         background: #333;
         color: #fff;
-        padding: 10px 20px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        padding: 10px 0;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: #fff;
         text-decoration: none;
-        display: inline-block;
-        border-radius: 5px;
-        transition: background 0.3s, transform 0.3s;
+        font-weight: bold;
+        padding: 5px 10px;
+        transition: color 0.3s;
       }
 
-      .section .btn:hover {
-        background: #555;
-        transform: translateY(-3px);
+      nav ul li a:hover {
+        color: #ff6f61;
       }
 
-      /* Animations */
-      @keyframes fadeInUp {
-        from {
-          transform: translateY(20px);
-          opacity: 0;
+      /* About Me Section Styles */
+      .about {
+        padding: 100px 20px; /* Ensure it doesn't overlap with the fixed header */
+        background: #f4f4f4;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .about .container {
+        max-width: 800px;
+        background: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        animation: fadeinup 1s ease-in-out;
+      }
+
+      .about h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+        animation: slide-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      }
+
+      .about p {
+        font-size: 1.2rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        animation: slideinleft 1s ease-in-out both;
+      }
+
+      .about p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Footer */
+      footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      footer p {
+        margin: 5px 0;
+      }
+
+      footer .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      footer .social-icons a {
+        margin: 0 10px;
+        font-size: 1.5rem;
+        color: #fff;
+        transition: color 0.3s;
+      }
+
+      footer .social-icons a:hover {
+        color: #ff6f61;
+      }
+
+      /* Media Queries */
+      @media (max-width: 1024px) {
+        .about h1 {
+          font-size: 2rem;
         }
-        to {
-          transform: translateY(0);
-          opacity: 1;
+
+        .about p {
+          font-size: 1rem;
         }
       }
 
-      @keyframes slideInLeft {
-        from {
-          transform: translateX(-100%);
-          opacity: 0;
+      @media (max-width: 768px) {
+        .about h1 {
+          font-size: 1.8rem;
         }
-        to {
-          transform: translateX(0);
-          opacity: 1;
+
+        .about p {
+          font-size: 0.9rem;
+        }
+
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav ul li {
+          margin: 10px 0;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .about h1 {
+          font-size: 1.5rem;
+        }
+
+        .about p {
+          font-size: 0.8rem;
         }
       }
     </style>
   </head>
   <body>
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <div class="content">
+    <header>
+      <div class="container">
+        <div class="logo">EF</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="about.html">About Me</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="about">
+      <div class="container">
+        <h1>About Me</h1>
         <p>
-          My name is Eluagu Franklin Chinonso, a graduate with a B.A in
-          International Relations from the University of Nigeria, Nsukka. I have
-          acquired various certifications including the Google Professional
-          Cybersecurity Certificate, Google Cloud Cybersecurity Professional
-          Certificate, Fullstack Web Development Certificate from ICTSlides, and
-          a Network and Database Vulnerabilities Certificate from IBM. My skills
-          encompass database management, network security, MySQL, Linux, and
-          cybersecurity, complemented by a strong background in human resources,
-          team leadership, and historical studies. Professionally, I have
-          experience as an HR Manager at Immaculate Supermarket, Nigeria. My expertise
-          includes threat and vulnerability management, asset management, and
-          cybersecurity. My educational and professional journey reflects my
-          dedication to personal growth and development, with a strong emphasis
-          on leadership, mentoring, and international relations.
+          Hello! I'm Eluagu Franklin, a passionate Web Developer, aspiring
+          Cybersecurity professional, and Human Resources specialist based in
+          Nigeria. I hold a degree in International Relations from the
+          University of Nigeria. My journey into the tech world started out of
+          curiosity and a desire to bridge gaps through innovative solutions.
         </p>
-        <a href="resume.pdf" download class="btn">Download Resume</a>
+        <p>
+          Over the years, I've honed my skills in web development, building
+          dynamic and responsive websites that provide seamless user
+          experiences. My goal is to continually expand my knowledge and
+          contribute to projects that make a meaningful impact. I am also
+          experienced in various aspects of cybersecurity, human resources, and
+          international relations.
+        </p>
+        <p>
+          When I'm not coding or working on cybersecurity challenges, I enjoy
+          reading about new technologies, participating in tech forums, and
+          mentoring upcoming developers. I believe in continuous learning and
+          always strive to improve myself both personally and professionally.
+        </p>
       </div>
     </section>
+    <footer>
+      <p>&copy; 2024 ELUAGU FRANKLIN. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/eluagu-franklin-84a3bab7/"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/Biggysmallzprod"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="mailto:eluagufranklin@gmail.com"
+          ><i class="fas fa-envelope"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
