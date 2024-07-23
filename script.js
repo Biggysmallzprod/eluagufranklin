@@ -1,35 +1,12 @@
-// script.js
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    alert("Thank you for your message!");
-    // Here you can add code to handle the form submission, e.g., sending the data to a server
+document.addEventListener("DOMContentLoaded", function () {
+  const navToggle = document.createElement("div");
+  navToggle.className = "nav-toggle";
+  navToggle.innerHTML =
+    '<i class="fas fa-bars"></i><i class="fas fa-times"></i>';
+  document.querySelector("header .container").appendChild(navToggle);
+
+  navToggle.addEventListener("click", function () {
+    document.querySelector("nav ul").classList.toggle("showing");
+    navToggle.classList.toggle("active");
   });
-
-
-
-
-// Toggle mobile menu
-const navToggle = document.getElementById('nav-toggle');
-const navUl = document.getElementById('nav-ul');
-
-navToggle.addEventListener('click', () => {
-  navUl.classList.toggle('showing');
-});
-
-// Smooth scroll for internal links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
-
-// Sticky header
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-  header.classList.toggle('sticky', window.scrollY > 0);
 });
